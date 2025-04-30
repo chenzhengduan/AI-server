@@ -1,0 +1,2541 @@
+[2025-04-30T02:59:26.539Z] 收到Sentry Webhook消息:
+[2025-04-30T02:59:26.541Z] --------- 消息头信息 ---------
+[2025-04-30T02:59:26.544Z] Headers: {
+  "host": "172.16.30.190:3000",
+  "accept-encoding": "identity",
+  "sentry-trace": "38cabc5dcac44fa08f98b41d77f4b1e0-89ffee354c52ed52-0",
+  "baggage": "sentry-environment=production,sentry-release=frontend%4025.4.0%2Ba00823c82e59d80dc96f9cf8aea8b92ebecd2102,sentry-public_key=16efc3b1621703e72841e065408c2a9a,sentry-trace_id=38cabc5dcac44fa08f98b41d77f4b1e0,sentry-transaction=/settings/%3AorgId/projects/%3AprojectId/alerts/,sentry-sampled=false,sentry-sample_rand=0.43295255802749855,sentry-sample_rate=0.0",
+  "user-agent": "python-urllib3/2.2.2",
+  "content-length": "9370",
+  "content-type": "application/json"
+}
+[2025-04-30T02:59:26.549Z] --------- 消息体信息 ---------
+[2025-04-30T02:59:26.551Z] Body: {
+  "id": "204618",
+  "project": "yunxuefu-h5",
+  "project_name": "yunxuefu-h5",
+  "project_slug": "yunxuefu-h5",
+  "logger": null,
+  "level": "error",
+  "culprit": "raven.scripts.runner in main",
+  "message": "This is an example Python exception",
+  "url": "https://sentry2.xiaogj.com/organizations/xiaogj/issues/204618/?referrer=webhooks_plugin",
+  "triggering_rules": [],
+  "event": {
+    "event_id": "4d871c1329eb4c8fbbc2528e549072b2",
+    "level": "error",
+    "version": "5",
+    "type": "default",
+    "logentry": {
+      "formatted": "This is an example Python exception",
+      "message": null,
+      "params": null
+    },
+    "logger": "",
+    "modules": {
+      "my.package": "1.0.0"
+    },
+    "platform": "python",
+    "timestamp": 1745981908.428,
+    "received": 1745981968.428944,
+    "environment": "prod",
+    "user": {
+      "id": "1",
+      "email": "sentry@example.com",
+      "ip_address": "127.0.0.1",
+      "username": "sentry",
+      "name": "Sentry",
+      "sentry_user": "id:1",
+      "geo": {
+        "country_code": "GB",
+        "city": "London",
+        "region": "H9"
+      }
+    },
+    "request": {
+      "url": "http://example.com/foo",
+      "method": "GET",
+      "data": {
+        "hello": "world"
+      },
+      "query_string": [
+        [
+          "foo",
+          "bar"
+        ]
+      ],
+      "cookies": [
+        [
+          "foo",
+          "bar"
+        ],
+        [
+          "biz",
+          "baz"
+        ]
+      ],
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Referer",
+          "http://example.com"
+        ],
+        [
+          "User-Agent",
+          "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36"
+        ]
+      ],
+      "env": {
+        "ENV": "prod"
+      },
+      "inferred_content_type": "application/json",
+      "api_target": null,
+      "fragment": null
+    },
+    "contexts": {
+      "browser": {
+        "browser": "Chrome 28.0.1500",
+        "name": "Chrome",
+        "version": "28.0.1500",
+        "type": "browser"
+      },
+      "client_os": {
+        "os": "Windows 8",
+        "name": "Windows",
+        "version": "8",
+        "type": "os"
+      }
+    },
+    "stacktrace": {
+      "frames": [
+        {
+          "function": "build_msg",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 303,
+          "pre_context": [
+            "                frames = stack",
+            "",
+            "            data.update({",
+            "                'sentry.interfaces.Stacktrace': {",
+            "                    'frames': get_stack_info(frames,"
+          ],
+          "context_line": "                        transformer=self.transform)",
+          "post_context": [
+            "                },",
+            "            })",
+            "",
+            "        if 'sentry.interfaces.Stacktrace' in data:",
+            "            if self.include_paths:"
+          ],
+          "in_app": false,
+          "vars": {
+            "'culprit'": null,
+            "'data'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'date'": "datetime.datetime(2013, 8, 13, 3, 8, 24, 880386)",
+            "'event_id'": "'54a322436e1b47b88e239b78998ae742'",
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'frames'": "<generator object iter_stack_frames at 0x107bcc3c0>",
+            "'handler'": "<raven.events.Message object at 0x107bd0890>",
+            "'k'": "'sentry.interfaces.Message'",
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'public_key'": null,
+            "'result'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null,
+            "'v'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'params'": []
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "capture",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 459,
+          "pre_context": [
+            "        if not self.is_enabled():",
+            "            return",
+            "",
+            "        data = self.build_msg(",
+            "            event_type, data, date, time_spent, extra, stack, tags=tags,"
+          ],
+          "context_line": "            **kwargs)",
+          "post_context": [
+            "",
+            "        self.send(**data)",
+            "",
+            "        return (data.get('event_id'),)",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'data'": null,
+            "'date'": null,
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "captureMessage",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 577,
+          "pre_context": [
+            "        \"\"\"",
+            "        Creates an event from ``message``.",
+            "",
+            "        >>> client.captureMessage('My event just happened!')",
+            "        \"\"\""
+          ],
+          "context_line": "        return self.capture('raven.events.Message', message=message, **kwargs)",
+          "post_context": [
+            "",
+            "    def captureException(self, exc_info=None, **kwargs):",
+            "        \"\"\"",
+            "        Creates an event from an exception.",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'kwargs'": {
+              "'data'": null,
+              "'extra'": {
+                "'go_deeper'": [
+                  "[{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}]"
+                ],
+                "'loadavg'": [
+                  0.37255859375,
+                  0.5341796875,
+                  0.62939453125
+                ],
+                "'user'": "'dcramer'"
+              },
+              "'level'": 20,
+              "'stack'": true,
+              "'tags'": null
+            },
+            "'message'": "'This is a test message generated using ``raven test``'",
+            "'self'": "<raven.base.Client object at 0x107bb8210>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "send_test_message",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 77,
+          "pre_context": [
+            "        level=logging.INFO,",
+            "        stack=True,",
+            "        tags=options.get('tags', {}),",
+            "        extra={",
+            "            'user': get_uid(),"
+          ],
+          "context_line": "            'loadavg': get_loadavg(),",
+          "post_context": [
+            "        },",
+            "    ))",
+            "",
+            "    if client.state.did_fail():",
+            "        print('error!')"
+          ],
+          "in_app": false,
+          "vars": {
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'data'": null,
+            "'k'": "'secret_key'",
+            "'options'": {
+              "'data'": null,
+              "'tags'": null
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "main",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 112,
+          "pre_context": [
+            "    print(\"Using DSN configuration:\")",
+            "    print(\" \", dsn)",
+            "    print()",
+            "",
+            "    client = Client(dsn, include_paths=['raven'])"
+          ],
+          "context_line": "    send_test_message(client, opts.__dict__)",
+          "in_app": false,
+          "vars": {
+            "'args'": [
+              "'test'",
+              "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'"
+            ],
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'dsn'": "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'",
+            "'opts'": "<Values at 0x107ba3b00: {'data': None, 'tags': None}>",
+            "'parser'": "<optparse.OptionParser instance at 0x107ba3368>",
+            "'root'": "<logging.Logger object at 0x107ba5b10>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "post_context": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        }
+      ]
+    },
+    "tags": [
+      [
+        "browser",
+        "Chrome 28.0.1500"
+      ],
+      [
+        "browser.name",
+        "Chrome"
+      ],
+      [
+        "client_os",
+        "Windows 8"
+      ],
+      [
+        "client_os.name",
+        "Windows"
+      ],
+      [
+        "environment",
+        "prod"
+      ],
+      [
+        "level",
+        "error"
+      ],
+      [
+        "sentry:user",
+        "id:1"
+      ],
+      [
+        "server_name",
+        "web01.example.org"
+      ],
+      [
+        "url",
+        "http://example.com/foo"
+      ]
+    ],
+    "extra": {
+      "emptyList": [],
+      "emptyMap": {},
+      "length": 10837790,
+      "results": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "session": {
+        "foo": "bar"
+      },
+      "unauthorized": false,
+      "url": "http://example.org/foo/bar/"
+    },
+    "grouping_config": {
+      "id": "newstyle:2023-01-11",
+      "enhancements": "KLUv_SAYwQAAkwKRs25ld3N0eWxlOjIwMjMtMDEtMTGQ"
+    },
+    "metadata": {
+      "title": "This is an example Python exception",
+      "in_app_frame_mix": "system-only"
+    },
+    "fingerprint": [
+      "{{ default }}"
+    ],
+    "hashes": [
+      "3a2b45089d0211943e5a6645fb4cea3f"
+    ],
+    "culprit": "raven.scripts.runner in main",
+    "title": "This is an example Python exception",
+    "location": null,
+    "_ref": 2,
+    "_ref_version": 2,
+    "_metrics": {
+      "bytes.stored.event": 8330
+    },
+    "nodestore_insert": 1745981968.507721,
+    "id": "4d871c1329eb4c8fbbc2528e549072b2"
+  }
+}
+[2025-04-30T02:59:26.566Z] 事件类型: 未知事件类型
+[2025-04-30T02:59:26.567Z] 处理未知事件类型: 未知事件类型
+[2025-04-30T02:59:26.567Z] 消息内容: {
+  "id": "204618",
+  "project": "yunxuefu-h5",
+  "project_name": "yunxuefu-h5",
+  "project_slug": "yunxuefu-h5",
+  "logger": null,
+  "level": "error",
+  "culprit": "raven.scripts.runner in main",
+  "message": "This is an example Python exception",
+  "url": "https://sentry2.xiaogj.com/organizations/xiaogj/issues/204618/?referrer=webhooks_plugin",
+  "triggering_rules": [],
+  "event": {
+    "event_id": "4d871c1329eb4c8fbbc2528e549072b2",
+    "level": "error",
+    "version": "5",
+    "type": "default",
+    "logentry": {
+      "formatted": "This is an example Python exception",
+      "message": null,
+      "params": null
+    },
+    "logger": "",
+    "modules": {
+      "my.package": "1.0.0"
+    },
+    "platform": "python",
+    "timestamp": 1745981908.428,
+    "received": 1745981968.428944,
+    "environment": "prod",
+    "user": {
+      "id": "1",
+      "email": "sentry@example.com",
+      "ip_address": "127.0.0.1",
+      "username": "sentry",
+      "name": "Sentry",
+      "sentry_user": "id:1",
+      "geo": {
+        "country_code": "GB",
+        "city": "London",
+        "region": "H9"
+      }
+    },
+    "request": {
+      "url": "http://example.com/foo",
+      "method": "GET",
+      "data": {
+        "hello": "world"
+      },
+      "query_string": [
+        [
+          "foo",
+          "bar"
+        ]
+      ],
+      "cookies": [
+        [
+          "foo",
+          "bar"
+        ],
+        [
+          "biz",
+          "baz"
+        ]
+      ],
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Referer",
+          "http://example.com"
+        ],
+        [
+          "User-Agent",
+          "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36"
+        ]
+      ],
+      "env": {
+        "ENV": "prod"
+      },
+      "inferred_content_type": "application/json",
+      "api_target": null,
+      "fragment": null
+    },
+    "contexts": {
+      "browser": {
+        "browser": "Chrome 28.0.1500",
+        "name": "Chrome",
+        "version": "28.0.1500",
+        "type": "browser"
+      },
+      "client_os": {
+        "os": "Windows 8",
+        "name": "Windows",
+        "version": "8",
+        "type": "os"
+      }
+    },
+    "stacktrace": {
+      "frames": [
+        {
+          "function": "build_msg",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 303,
+          "pre_context": [
+            "                frames = stack",
+            "",
+            "            data.update({",
+            "                'sentry.interfaces.Stacktrace': {",
+            "                    'frames': get_stack_info(frames,"
+          ],
+          "context_line": "                        transformer=self.transform)",
+          "post_context": [
+            "                },",
+            "            })",
+            "",
+            "        if 'sentry.interfaces.Stacktrace' in data:",
+            "            if self.include_paths:"
+          ],
+          "in_app": false,
+          "vars": {
+            "'culprit'": null,
+            "'data'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'date'": "datetime.datetime(2013, 8, 13, 3, 8, 24, 880386)",
+            "'event_id'": "'54a322436e1b47b88e239b78998ae742'",
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'frames'": "<generator object iter_stack_frames at 0x107bcc3c0>",
+            "'handler'": "<raven.events.Message object at 0x107bd0890>",
+            "'k'": "'sentry.interfaces.Message'",
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'public_key'": null,
+            "'result'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null,
+            "'v'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'params'": []
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "capture",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 459,
+          "pre_context": [
+            "        if not self.is_enabled():",
+            "            return",
+            "",
+            "        data = self.build_msg(",
+            "            event_type, data, date, time_spent, extra, stack, tags=tags,"
+          ],
+          "context_line": "            **kwargs)",
+          "post_context": [
+            "",
+            "        self.send(**data)",
+            "",
+            "        return (data.get('event_id'),)",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'data'": null,
+            "'date'": null,
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "captureMessage",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 577,
+          "pre_context": [
+            "        \"\"\"",
+            "        Creates an event from ``message``.",
+            "",
+            "        >>> client.captureMessage('My event just happened!')",
+            "        \"\"\""
+          ],
+          "context_line": "        return self.capture('raven.events.Message', message=message, **kwargs)",
+          "post_context": [
+            "",
+            "    def captureException(self, exc_info=None, **kwargs):",
+            "        \"\"\"",
+            "        Creates an event from an exception.",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'kwargs'": {
+              "'data'": null,
+              "'extra'": {
+                "'go_deeper'": [
+                  "[{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}]"
+                ],
+                "'loadavg'": [
+                  0.37255859375,
+                  0.5341796875,
+                  0.62939453125
+                ],
+                "'user'": "'dcramer'"
+              },
+              "'level'": 20,
+              "'stack'": true,
+              "'tags'": null
+            },
+            "'message'": "'This is a test message generated using ``raven test``'",
+            "'self'": "<raven.base.Client object at 0x107bb8210>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "send_test_message",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 77,
+          "pre_context": [
+            "        level=logging.INFO,",
+            "        stack=True,",
+            "        tags=options.get('tags', {}),",
+            "        extra={",
+            "            'user': get_uid(),"
+          ],
+          "context_line": "            'loadavg': get_loadavg(),",
+          "post_context": [
+            "        },",
+            "    ))",
+            "",
+            "    if client.state.did_fail():",
+            "        print('error!')"
+          ],
+          "in_app": false,
+          "vars": {
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'data'": null,
+            "'k'": "'secret_key'",
+            "'options'": {
+              "'data'": null,
+              "'tags'": null
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "main",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 112,
+          "pre_context": [
+            "    print(\"Using DSN configuration:\")",
+            "    print(\" \", dsn)",
+            "    print()",
+            "",
+            "    client = Client(dsn, include_paths=['raven'])"
+          ],
+          "context_line": "    send_test_message(client, opts.__dict__)",
+          "in_app": false,
+          "vars": {
+            "'args'": [
+              "'test'",
+              "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'"
+            ],
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'dsn'": "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'",
+            "'opts'": "<Values at 0x107ba3b00: {'data': None, 'tags': None}>",
+            "'parser'": "<optparse.OptionParser instance at 0x107ba3368>",
+            "'root'": "<logging.Logger object at 0x107ba5b10>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "post_context": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        }
+      ]
+    },
+    "tags": [
+      [
+        "browser",
+        "Chrome 28.0.1500"
+      ],
+      [
+        "browser.name",
+        "Chrome"
+      ],
+      [
+        "client_os",
+        "Windows 8"
+      ],
+      [
+        "client_os.name",
+        "Windows"
+      ],
+      [
+        "environment",
+        "prod"
+      ],
+      [
+        "level",
+        "error"
+      ],
+      [
+        "sentry:user",
+        "id:1"
+      ],
+      [
+        "server_name",
+        "web01.example.org"
+      ],
+      [
+        "url",
+        "http://example.com/foo"
+      ]
+    ],
+    "extra": {
+      "emptyList": [],
+      "emptyMap": {},
+      "length": 10837790,
+      "results": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "session": {
+        "foo": "bar"
+      },
+      "unauthorized": false,
+      "url": "http://example.org/foo/bar/"
+    },
+    "grouping_config": {
+      "id": "newstyle:2023-01-11",
+      "enhancements": "KLUv_SAYwQAAkwKRs25ld3N0eWxlOjIwMjMtMDEtMTGQ"
+    },
+    "metadata": {
+      "title": "This is an example Python exception",
+      "in_app_frame_mix": "system-only"
+    },
+    "fingerprint": [
+      "{{ default }}"
+    ],
+    "hashes": [
+      "3a2b45089d0211943e5a6645fb4cea3f"
+    ],
+    "culprit": "raven.scripts.runner in main",
+    "title": "This is an example Python exception",
+    "location": null,
+    "_ref": 2,
+    "_ref_version": 2,
+    "_metrics": {
+      "bytes.stored.event": 8330
+    },
+    "nodestore_insert": 1745981968.507721,
+    "id": "4d871c1329eb4c8fbbc2528e549072b2"
+  }
+}
+[2025-04-30T02:59:57.459Z] 收到Sentry Webhook消息:
+[2025-04-30T02:59:57.460Z] --------- 消息头信息 ---------
+[2025-04-30T02:59:57.460Z] Headers: {
+  "host": "172.16.30.190:3000",
+  "accept-encoding": "identity",
+  "sentry-trace": "38cabc5dcac44fa08f98b41d77f4b1e0-a199e030d6311044-0",
+  "baggage": "sentry-environment=production,sentry-release=frontend%4025.4.0%2Ba00823c82e59d80dc96f9cf8aea8b92ebecd2102,sentry-public_key=16efc3b1621703e72841e065408c2a9a,sentry-trace_id=38cabc5dcac44fa08f98b41d77f4b1e0,sentry-transaction=/settings/%3AorgId/projects/%3AprojectId/alerts/,sentry-sampled=false,sentry-sample_rand=0.43295255802749855,sentry-sample_rate=0.0",
+  "user-agent": "python-urllib3/2.2.2",
+  "content-length": "9374",
+  "content-type": "application/json"
+}
+[2025-04-30T02:59:57.461Z] --------- 消息体信息 ---------
+[2025-04-30T02:59:57.462Z] Body: {
+  "id": "204618",
+  "project": "yunxuefu-h5",
+  "project_name": "yunxuefu-h5",
+  "project_slug": "yunxuefu-h5",
+  "logger": null,
+  "level": "error",
+  "culprit": "raven.scripts.runner in main",
+  "message": "This is an example Python exception",
+  "url": "https://sentry2.xiaogj.com/organizations/xiaogj/issues/204618/?referrer=webhooks_plugin",
+  "triggering_rules": [],
+  "event": {
+    "event_id": "82733ce3890b4c0bb89dcd9a4b8b10ee",
+    "level": "error",
+    "version": "5",
+    "type": "default",
+    "logentry": {
+      "formatted": "This is an example Python exception",
+      "message": null,
+      "params": null
+    },
+    "logger": "",
+    "modules": {
+      "my.package": "1.0.0"
+    },
+    "platform": "python",
+    "timestamp": 1745981939.369,
+    "received": 1745981999.370405,
+    "environment": "prod",
+    "user": {
+      "id": "1",
+      "email": "sentry@example.com",
+      "ip_address": "127.0.0.1",
+      "username": "sentry",
+      "name": "Sentry",
+      "sentry_user": "id:1",
+      "geo": {
+        "country_code": "AU",
+        "city": "Melbourne",
+        "region": "VIC"
+      }
+    },
+    "request": {
+      "url": "http://example.com/foo",
+      "method": "GET",
+      "data": {
+        "hello": "world"
+      },
+      "query_string": [
+        [
+          "foo",
+          "bar"
+        ]
+      ],
+      "cookies": [
+        [
+          "foo",
+          "bar"
+        ],
+        [
+          "biz",
+          "baz"
+        ]
+      ],
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Referer",
+          "http://example.com"
+        ],
+        [
+          "User-Agent",
+          "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36"
+        ]
+      ],
+      "env": {
+        "ENV": "prod"
+      },
+      "inferred_content_type": "application/json",
+      "api_target": null,
+      "fragment": null
+    },
+    "contexts": {
+      "browser": {
+        "browser": "Chrome 28.0.1500",
+        "name": "Chrome",
+        "version": "28.0.1500",
+        "type": "browser"
+      },
+      "client_os": {
+        "os": "Windows 8",
+        "name": "Windows",
+        "version": "8",
+        "type": "os"
+      }
+    },
+    "stacktrace": {
+      "frames": [
+        {
+          "function": "build_msg",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 303,
+          "pre_context": [
+            "                frames = stack",
+            "",
+            "            data.update({",
+            "                'sentry.interfaces.Stacktrace': {",
+            "                    'frames': get_stack_info(frames,"
+          ],
+          "context_line": "                        transformer=self.transform)",
+          "post_context": [
+            "                },",
+            "            })",
+            "",
+            "        if 'sentry.interfaces.Stacktrace' in data:",
+            "            if self.include_paths:"
+          ],
+          "in_app": false,
+          "vars": {
+            "'culprit'": null,
+            "'data'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'date'": "datetime.datetime(2013, 8, 13, 3, 8, 24, 880386)",
+            "'event_id'": "'54a322436e1b47b88e239b78998ae742'",
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'frames'": "<generator object iter_stack_frames at 0x107bcc3c0>",
+            "'handler'": "<raven.events.Message object at 0x107bd0890>",
+            "'k'": "'sentry.interfaces.Message'",
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'public_key'": null,
+            "'result'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null,
+            "'v'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'params'": []
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "capture",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 459,
+          "pre_context": [
+            "        if not self.is_enabled():",
+            "            return",
+            "",
+            "        data = self.build_msg(",
+            "            event_type, data, date, time_spent, extra, stack, tags=tags,"
+          ],
+          "context_line": "            **kwargs)",
+          "post_context": [
+            "",
+            "        self.send(**data)",
+            "",
+            "        return (data.get('event_id'),)",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'data'": null,
+            "'date'": null,
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "captureMessage",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 577,
+          "pre_context": [
+            "        \"\"\"",
+            "        Creates an event from ``message``.",
+            "",
+            "        >>> client.captureMessage('My event just happened!')",
+            "        \"\"\""
+          ],
+          "context_line": "        return self.capture('raven.events.Message', message=message, **kwargs)",
+          "post_context": [
+            "",
+            "    def captureException(self, exc_info=None, **kwargs):",
+            "        \"\"\"",
+            "        Creates an event from an exception.",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'kwargs'": {
+              "'data'": null,
+              "'extra'": {
+                "'go_deeper'": [
+                  "[{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}]"
+                ],
+                "'loadavg'": [
+                  0.37255859375,
+                  0.5341796875,
+                  0.62939453125
+                ],
+                "'user'": "'dcramer'"
+              },
+              "'level'": 20,
+              "'stack'": true,
+              "'tags'": null
+            },
+            "'message'": "'This is a test message generated using ``raven test``'",
+            "'self'": "<raven.base.Client object at 0x107bb8210>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "send_test_message",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 77,
+          "pre_context": [
+            "        level=logging.INFO,",
+            "        stack=True,",
+            "        tags=options.get('tags', {}),",
+            "        extra={",
+            "            'user': get_uid(),"
+          ],
+          "context_line": "            'loadavg': get_loadavg(),",
+          "post_context": [
+            "        },",
+            "    ))",
+            "",
+            "    if client.state.did_fail():",
+            "        print('error!')"
+          ],
+          "in_app": false,
+          "vars": {
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'data'": null,
+            "'k'": "'secret_key'",
+            "'options'": {
+              "'data'": null,
+              "'tags'": null
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "main",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 112,
+          "pre_context": [
+            "    print(\"Using DSN configuration:\")",
+            "    print(\" \", dsn)",
+            "    print()",
+            "",
+            "    client = Client(dsn, include_paths=['raven'])"
+          ],
+          "context_line": "    send_test_message(client, opts.__dict__)",
+          "in_app": false,
+          "vars": {
+            "'args'": [
+              "'test'",
+              "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'"
+            ],
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'dsn'": "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'",
+            "'opts'": "<Values at 0x107ba3b00: {'data': None, 'tags': None}>",
+            "'parser'": "<optparse.OptionParser instance at 0x107ba3368>",
+            "'root'": "<logging.Logger object at 0x107ba5b10>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "post_context": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        }
+      ]
+    },
+    "tags": [
+      [
+        "browser",
+        "Chrome 28.0.1500"
+      ],
+      [
+        "browser.name",
+        "Chrome"
+      ],
+      [
+        "client_os",
+        "Windows 8"
+      ],
+      [
+        "client_os.name",
+        "Windows"
+      ],
+      [
+        "environment",
+        "prod"
+      ],
+      [
+        "level",
+        "error"
+      ],
+      [
+        "sentry:user",
+        "id:1"
+      ],
+      [
+        "server_name",
+        "web01.example.org"
+      ],
+      [
+        "url",
+        "http://example.com/foo"
+      ]
+    ],
+    "extra": {
+      "emptyList": [],
+      "emptyMap": {},
+      "length": 10837790,
+      "results": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "session": {
+        "foo": "bar"
+      },
+      "unauthorized": false,
+      "url": "http://example.org/foo/bar/"
+    },
+    "grouping_config": {
+      "id": "newstyle:2023-01-11",
+      "enhancements": "KLUv_SAYwQAAkwKRs25ld3N0eWxlOjIwMjMtMDEtMTGQ"
+    },
+    "metadata": {
+      "title": "This is an example Python exception",
+      "in_app_frame_mix": "system-only"
+    },
+    "fingerprint": [
+      "{{ default }}"
+    ],
+    "hashes": [
+      "3a2b45089d0211943e5a6645fb4cea3f"
+    ],
+    "culprit": "raven.scripts.runner in main",
+    "title": "This is an example Python exception",
+    "location": null,
+    "_ref": 2,
+    "_ref_version": 2,
+    "_metrics": {
+      "bytes.stored.event": 8334
+    },
+    "nodestore_insert": 1745981999.404202,
+    "id": "82733ce3890b4c0bb89dcd9a4b8b10ee"
+  }
+}
+[2025-04-30T02:59:57.474Z] 事件类型: 未知事件类型
+[2025-04-30T02:59:57.474Z] 处理未知事件类型: 未知事件类型
+[2025-04-30T02:59:57.475Z] 消息内容: {
+  "id": "204618",
+  "project": "yunxuefu-h5",
+  "project_name": "yunxuefu-h5",
+  "project_slug": "yunxuefu-h5",
+  "logger": null,
+  "level": "error",
+  "culprit": "raven.scripts.runner in main",
+  "message": "This is an example Python exception",
+  "url": "https://sentry2.xiaogj.com/organizations/xiaogj/issues/204618/?referrer=webhooks_plugin",
+  "triggering_rules": [],
+  "event": {
+    "event_id": "82733ce3890b4c0bb89dcd9a4b8b10ee",
+    "level": "error",
+    "version": "5",
+    "type": "default",
+    "logentry": {
+      "formatted": "This is an example Python exception",
+      "message": null,
+      "params": null
+    },
+    "logger": "",
+    "modules": {
+      "my.package": "1.0.0"
+    },
+    "platform": "python",
+    "timestamp": 1745981939.369,
+    "received": 1745981999.370405,
+    "environment": "prod",
+    "user": {
+      "id": "1",
+      "email": "sentry@example.com",
+      "ip_address": "127.0.0.1",
+      "username": "sentry",
+      "name": "Sentry",
+      "sentry_user": "id:1",
+      "geo": {
+        "country_code": "AU",
+        "city": "Melbourne",
+        "region": "VIC"
+      }
+    },
+    "request": {
+      "url": "http://example.com/foo",
+      "method": "GET",
+      "data": {
+        "hello": "world"
+      },
+      "query_string": [
+        [
+          "foo",
+          "bar"
+        ]
+      ],
+      "cookies": [
+        [
+          "foo",
+          "bar"
+        ],
+        [
+          "biz",
+          "baz"
+        ]
+      ],
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Referer",
+          "http://example.com"
+        ],
+        [
+          "User-Agent",
+          "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36"
+        ]
+      ],
+      "env": {
+        "ENV": "prod"
+      },
+      "inferred_content_type": "application/json",
+      "api_target": null,
+      "fragment": null
+    },
+    "contexts": {
+      "browser": {
+        "browser": "Chrome 28.0.1500",
+        "name": "Chrome",
+        "version": "28.0.1500",
+        "type": "browser"
+      },
+      "client_os": {
+        "os": "Windows 8",
+        "name": "Windows",
+        "version": "8",
+        "type": "os"
+      }
+    },
+    "stacktrace": {
+      "frames": [
+        {
+          "function": "build_msg",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 303,
+          "pre_context": [
+            "                frames = stack",
+            "",
+            "            data.update({",
+            "                'sentry.interfaces.Stacktrace': {",
+            "                    'frames': get_stack_info(frames,"
+          ],
+          "context_line": "                        transformer=self.transform)",
+          "post_context": [
+            "                },",
+            "            })",
+            "",
+            "        if 'sentry.interfaces.Stacktrace' in data:",
+            "            if self.include_paths:"
+          ],
+          "in_app": false,
+          "vars": {
+            "'culprit'": null,
+            "'data'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'date'": "datetime.datetime(2013, 8, 13, 3, 8, 24, 880386)",
+            "'event_id'": "'54a322436e1b47b88e239b78998ae742'",
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'frames'": "<generator object iter_stack_frames at 0x107bcc3c0>",
+            "'handler'": "<raven.events.Message object at 0x107bd0890>",
+            "'k'": "'sentry.interfaces.Message'",
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'public_key'": null,
+            "'result'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null,
+            "'v'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'params'": []
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "capture",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 459,
+          "pre_context": [
+            "        if not self.is_enabled():",
+            "            return",
+            "",
+            "        data = self.build_msg(",
+            "            event_type, data, date, time_spent, extra, stack, tags=tags,"
+          ],
+          "context_line": "            **kwargs)",
+          "post_context": [
+            "",
+            "        self.send(**data)",
+            "",
+            "        return (data.get('event_id'),)",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'data'": null,
+            "'date'": null,
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "captureMessage",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 577,
+          "pre_context": [
+            "        \"\"\"",
+            "        Creates an event from ``message``.",
+            "",
+            "        >>> client.captureMessage('My event just happened!')",
+            "        \"\"\""
+          ],
+          "context_line": "        return self.capture('raven.events.Message', message=message, **kwargs)",
+          "post_context": [
+            "",
+            "    def captureException(self, exc_info=None, **kwargs):",
+            "        \"\"\"",
+            "        Creates an event from an exception.",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'kwargs'": {
+              "'data'": null,
+              "'extra'": {
+                "'go_deeper'": [
+                  "[{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}]"
+                ],
+                "'loadavg'": [
+                  0.37255859375,
+                  0.5341796875,
+                  0.62939453125
+                ],
+                "'user'": "'dcramer'"
+              },
+              "'level'": 20,
+              "'stack'": true,
+              "'tags'": null
+            },
+            "'message'": "'This is a test message generated using ``raven test``'",
+            "'self'": "<raven.base.Client object at 0x107bb8210>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "send_test_message",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 77,
+          "pre_context": [
+            "        level=logging.INFO,",
+            "        stack=True,",
+            "        tags=options.get('tags', {}),",
+            "        extra={",
+            "            'user': get_uid(),"
+          ],
+          "context_line": "            'loadavg': get_loadavg(),",
+          "post_context": [
+            "        },",
+            "    ))",
+            "",
+            "    if client.state.did_fail():",
+            "        print('error!')"
+          ],
+          "in_app": false,
+          "vars": {
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'data'": null,
+            "'k'": "'secret_key'",
+            "'options'": {
+              "'data'": null,
+              "'tags'": null
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "main",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 112,
+          "pre_context": [
+            "    print(\"Using DSN configuration:\")",
+            "    print(\" \", dsn)",
+            "    print()",
+            "",
+            "    client = Client(dsn, include_paths=['raven'])"
+          ],
+          "context_line": "    send_test_message(client, opts.__dict__)",
+          "in_app": false,
+          "vars": {
+            "'args'": [
+              "'test'",
+              "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'"
+            ],
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'dsn'": "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'",
+            "'opts'": "<Values at 0x107ba3b00: {'data': None, 'tags': None}>",
+            "'parser'": "<optparse.OptionParser instance at 0x107ba3368>",
+            "'root'": "<logging.Logger object at 0x107ba5b10>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "post_context": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        }
+      ]
+    },
+    "tags": [
+      [
+        "browser",
+        "Chrome 28.0.1500"
+      ],
+      [
+        "browser.name",
+        "Chrome"
+      ],
+      [
+        "client_os",
+        "Windows 8"
+      ],
+      [
+        "client_os.name",
+        "Windows"
+      ],
+      [
+        "environment",
+        "prod"
+      ],
+      [
+        "level",
+        "error"
+      ],
+      [
+        "sentry:user",
+        "id:1"
+      ],
+      [
+        "server_name",
+        "web01.example.org"
+      ],
+      [
+        "url",
+        "http://example.com/foo"
+      ]
+    ],
+    "extra": {
+      "emptyList": [],
+      "emptyMap": {},
+      "length": 10837790,
+      "results": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "session": {
+        "foo": "bar"
+      },
+      "unauthorized": false,
+      "url": "http://example.org/foo/bar/"
+    },
+    "grouping_config": {
+      "id": "newstyle:2023-01-11",
+      "enhancements": "KLUv_SAYwQAAkwKRs25ld3N0eWxlOjIwMjMtMDEtMTGQ"
+    },
+    "metadata": {
+      "title": "This is an example Python exception",
+      "in_app_frame_mix": "system-only"
+    },
+    "fingerprint": [
+      "{{ default }}"
+    ],
+    "hashes": [
+      "3a2b45089d0211943e5a6645fb4cea3f"
+    ],
+    "culprit": "raven.scripts.runner in main",
+    "title": "This is an example Python exception",
+    "location": null,
+    "_ref": 2,
+    "_ref_version": 2,
+    "_metrics": {
+      "bytes.stored.event": 8334
+    },
+    "nodestore_insert": 1745981999.404202,
+    "id": "82733ce3890b4c0bb89dcd9a4b8b10ee"
+  }
+}
+[2025-04-30T03:01:26.690Z] Sentry Webhook服务已启动，监听端口: 3000
+[2025-04-30T03:01:26.691Z] 健康检查: http://localhost:3000/health
+[2025-04-30T03:01:26.691Z] Webhook接收地址: http://localhost:3000/webhook
+[2025-04-30T03:01:26.692Z] 日志文件路径: D:\czd\AI-server\sentry-webhook-server\logs\sentry-webhook-2025-04-30.log
+[2025-04-30T03:02:32.548Z] Sentry Webhook服务已启动，监听端口: 3000
+[2025-04-30T03:02:32.550Z] 健康检查: http://localhost:3000/health
+[2025-04-30T03:02:32.550Z] Webhook接收地址: http://localhost:3000/webhook
+[2025-04-30T03:02:32.550Z] 日志文件路径: D:\czd\AI-server\sentry-webhook-server\logs\sentry-webhook-2025-04-30.log
+[2025-04-30T03:02:54.642Z] 收到Sentry Webhook消息:
+[2025-04-30T03:02:54.642Z] --------- 消息头信息 ---------
+[2025-04-30T03:02:54.642Z] Headers: {
+  "host": "172.16.30.190:3000",
+  "accept-encoding": "identity",
+  "sentry-trace": "38cabc5dcac44fa08f98b41d77f4b1e0-a77d885c716bbbbe-0",
+  "baggage": "sentry-environment=production,sentry-release=frontend%4025.4.0%2Ba00823c82e59d80dc96f9cf8aea8b92ebecd2102,sentry-public_key=16efc3b1621703e72841e065408c2a9a,sentry-trace_id=38cabc5dcac44fa08f98b41d77f4b1e0,sentry-transaction=/settings/%3AorgId/projects/%3AprojectId/alerts/,sentry-sampled=false,sentry-sample_rand=0.43295255802749855,sentry-sample_rate=0.0",
+  "user-agent": "python-urllib3/2.2.2",
+  "content-length": "9373",
+  "content-type": "application/json"
+}
+[2025-04-30T03:02:54.643Z] --------- 消息体信息 ---------
+[2025-04-30T03:02:54.643Z] Body: {
+  "id": "204618",
+  "project": "yunxuefu-h5",
+  "project_name": "yunxuefu-h5",
+  "project_slug": "yunxuefu-h5",
+  "logger": null,
+  "level": "error",
+  "culprit": "raven.scripts.runner in main",
+  "message": "This is an example Python exception",
+  "url": "https://sentry2.xiaogj.com/organizations/xiaogj/issues/204618/?referrer=webhooks_plugin",
+  "triggering_rules": [],
+  "event": {
+    "event_id": "a66157c7ef8d4dd19c68d6c8cdafe983",
+    "level": "error",
+    "version": "5",
+    "type": "default",
+    "logentry": {
+      "formatted": "This is an example Python exception",
+      "message": null,
+      "params": null
+    },
+    "logger": "",
+    "modules": {
+      "my.package": "1.0.0"
+    },
+    "platform": "python",
+    "timestamp": 1745982116.53,
+    "received": 1745982176.531625,
+    "environment": "prod",
+    "user": {
+      "id": "1",
+      "email": "sentry@example.com",
+      "ip_address": "127.0.0.1",
+      "username": "sentry",
+      "name": "Sentry",
+      "sentry_user": "id:1",
+      "geo": {
+        "country_code": "AU",
+        "city": "Melbourne",
+        "region": "VIC"
+      }
+    },
+    "request": {
+      "url": "http://example.com/foo",
+      "method": "GET",
+      "data": {
+        "hello": "world"
+      },
+      "query_string": [
+        [
+          "foo",
+          "bar"
+        ]
+      ],
+      "cookies": [
+        [
+          "foo",
+          "bar"
+        ],
+        [
+          "biz",
+          "baz"
+        ]
+      ],
+      "headers": [
+        [
+          "Content-Type",
+          "application/json"
+        ],
+        [
+          "Referer",
+          "http://example.com"
+        ],
+        [
+          "User-Agent",
+          "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/28.0.1500.72 Safari/537.36"
+        ]
+      ],
+      "env": {
+        "ENV": "prod"
+      },
+      "inferred_content_type": "application/json",
+      "api_target": null,
+      "fragment": null
+    },
+    "contexts": {
+      "browser": {
+        "browser": "Chrome 28.0.1500",
+        "name": "Chrome",
+        "version": "28.0.1500",
+        "type": "browser"
+      },
+      "client_os": {
+        "os": "Windows 8",
+        "name": "Windows",
+        "version": "8",
+        "type": "os"
+      }
+    },
+    "stacktrace": {
+      "frames": [
+        {
+          "function": "build_msg",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 303,
+          "pre_context": [
+            "                frames = stack",
+            "",
+            "            data.update({",
+            "                'sentry.interfaces.Stacktrace': {",
+            "                    'frames': get_stack_info(frames,"
+          ],
+          "context_line": "                        transformer=self.transform)",
+          "post_context": [
+            "                },",
+            "            })",
+            "",
+            "        if 'sentry.interfaces.Stacktrace' in data:",
+            "            if self.include_paths:"
+          ],
+          "in_app": false,
+          "vars": {
+            "'culprit'": null,
+            "'data'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'date'": "datetime.datetime(2013, 8, 13, 3, 8, 24, 880386)",
+            "'event_id'": "'54a322436e1b47b88e239b78998ae742'",
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'frames'": "<generator object iter_stack_frames at 0x107bcc3c0>",
+            "'handler'": "<raven.events.Message object at 0x107bd0890>",
+            "'k'": "'sentry.interfaces.Message'",
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'public_key'": null,
+            "'result'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'sentry.interfaces.Message'": {
+                "'message'": "u'This is a test message generated using ``raven test``'",
+                "'params'": []
+              }
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null,
+            "'v'": {
+              "'message'": "u'This is a test message generated using ``raven test``'",
+              "'params'": []
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "capture",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 459,
+          "pre_context": [
+            "        if not self.is_enabled():",
+            "            return",
+            "",
+            "        data = self.build_msg(",
+            "            event_type, data, date, time_spent, extra, stack, tags=tags,"
+          ],
+          "context_line": "            **kwargs)",
+          "post_context": [
+            "",
+            "        self.send(**data)",
+            "",
+            "        return (data.get('event_id'),)",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'data'": null,
+            "'date'": null,
+            "'event_type'": "'raven.events.Message'",
+            "'extra'": {
+              "'go_deeper'": [
+                [
+                  "{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}"
+                ]
+              ],
+              "'loadavg'": [
+                0.37255859375,
+                0.5341796875,
+                0.62939453125
+              ],
+              "'user'": "'dcramer'"
+            },
+            "'kwargs'": {
+              "'level'": 20,
+              "'message'": "'This is a test message generated using ``raven test``'"
+            },
+            "'self'": "<raven.base.Client object at 0x107bb8210>",
+            "'stack'": true,
+            "'tags'": null,
+            "'time_spent'": null
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "captureMessage",
+          "module": "raven.base",
+          "filename": "raven/base.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/base.py",
+          "lineno": 577,
+          "pre_context": [
+            "        \"\"\"",
+            "        Creates an event from ``message``.",
+            "",
+            "        >>> client.captureMessage('My event just happened!')",
+            "        \"\"\""
+          ],
+          "context_line": "        return self.capture('raven.events.Message', message=message, **kwargs)",
+          "post_context": [
+            "",
+            "    def captureException(self, exc_info=None, **kwargs):",
+            "        \"\"\"",
+            "        Creates an event from an exception.",
+            ""
+          ],
+          "in_app": false,
+          "vars": {
+            "'kwargs'": {
+              "'data'": null,
+              "'extra'": {
+                "'go_deeper'": [
+                  "[{\"'bar'\":[\"'baz'\"],\"'foo'\":\"'bar'\"}]"
+                ],
+                "'loadavg'": [
+                  0.37255859375,
+                  0.5341796875,
+                  0.62939453125
+                ],
+                "'user'": "'dcramer'"
+              },
+              "'level'": 20,
+              "'stack'": true,
+              "'tags'": null
+            },
+            "'message'": "'This is a test message generated using ``raven test``'",
+            "'self'": "<raven.base.Client object at 0x107bb8210>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "send_test_message",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 77,
+          "pre_context": [
+            "        level=logging.INFO,",
+            "        stack=True,",
+            "        tags=options.get('tags', {}),",
+            "        extra={",
+            "            'user': get_uid(),"
+          ],
+          "context_line": "            'loadavg': get_loadavg(),",
+          "post_context": [
+            "        },",
+            "    ))",
+            "",
+            "    if client.state.did_fail():",
+            "        print('error!')"
+          ],
+          "in_app": false,
+          "vars": {
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'data'": null,
+            "'k'": "'secret_key'",
+            "'options'": {
+              "'data'": null,
+              "'tags'": null
+            }
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        },
+        {
+          "function": "main",
+          "module": "raven.scripts.runner",
+          "filename": "raven/scripts/runner.py",
+          "abs_path": "/home/ubuntu/.virtualenvs/getsentry/src/raven/raven/scripts/runner.py",
+          "lineno": 112,
+          "pre_context": [
+            "    print(\"Using DSN configuration:\")",
+            "    print(\" \", dsn)",
+            "    print()",
+            "",
+            "    client = Client(dsn, include_paths=['raven'])"
+          ],
+          "context_line": "    send_test_message(client, opts.__dict__)",
+          "in_app": false,
+          "vars": {
+            "'args'": [
+              "'test'",
+              "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'"
+            ],
+            "'client'": "<raven.base.Client object at 0x107bb8210>",
+            "'dsn'": "'https://ebc35f33e151401f9deac549978bda11:f3403f81e12e4c24942d505f086b2cad@sentry.io/1'",
+            "'opts'": "<Values at 0x107ba3b00: {'data': None, 'tags': None}>",
+            "'parser'": "<optparse.OptionParser instance at 0x107ba3368>",
+            "'root'": "<logging.Logger object at 0x107ba5b10>"
+          },
+          "colno": null,
+          "data": null,
+          "errors": null,
+          "raw_function": null,
+          "image_addr": null,
+          "instruction_addr": null,
+          "addr_mode": null,
+          "package": null,
+          "platform": null,
+          "post_context": null,
+          "source_link": null,
+          "symbol": null,
+          "symbol_addr": null,
+          "trust": null,
+          "lock": null
+        }
+      ]
+    },
+    "tags": [
+      [
+        "browser",
+        "Chrome 28.0.1500"
+      ],
+      [
+        "browser.name",
+        "Chrome"
+      ],
+      [
+        "client_os",
+        "Windows 8"
+      ],
+      [
+        "client_os.name",
+        "Windows"
+      ],
+      [
+        "environment",
+        "prod"
+      ],
+      [
+        "level",
+        "error"
+      ],
+      [
+        "sentry:user",
+        "id:1"
+      ],
+      [
+        "server_name",
+        "web01.example.org"
+      ],
+      [
+        "url",
+        "http://example.com/foo"
+      ]
+    ],
+    "extra": {
+      "emptyList": [],
+      "emptyMap": {},
+      "length": 10837790,
+      "results": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "session": {
+        "foo": "bar"
+      },
+      "unauthorized": false,
+      "url": "http://example.org/foo/bar/"
+    },
+    "grouping_config": {
+      "id": "newstyle:2023-01-11",
+      "enhancements": "KLUv_SAYwQAAkwKRs25ld3N0eWxlOjIwMjMtMDEtMTGQ"
+    },
+    "metadata": {
+      "title": "This is an example Python exception",
+      "in_app_frame_mix": "system-only"
+    },
+    "fingerprint": [
+      "{{ default }}"
+    ],
+    "hashes": [
+      "3a2b45089d0211943e5a6645fb4cea3f"
+    ],
+    "culprit": "raven.scripts.runner in main",
+    "title": "This is an example Python exception",
+    "location": null,
+    "_ref": 2,
+    "_ref_version": 2,
+    "_metrics": {
+      "bytes.stored.event": 8333
+    },
+    "nodestore_insert": 1745982176.609125,
+    "id": "a66157c7ef8d4dd19c68d6c8cdafe983"
+  }
+}
+[2025-04-30T03:02:54.659Z] 从消息体识别出错误事件
+[2025-04-30T03:02:54.659Z] 事件类型: event
+[2025-04-30T03:02:54.660Z] --------- 错误事件处理 ---------
+[2025-04-30T03:02:54.660Z] 项目: yunxuefu-h5
+[2025-04-30T03:02:54.660Z] 事件ID: a66157c7ef8d4dd19c68d6c8cdafe983
+[2025-04-30T03:02:54.660Z] 错误消息: 未知错误
+[2025-04-30T03:02:54.661Z] 错误级别: error
+[2025-04-30T03:02:54.661Z] 发生时间: 1745982116.53
+[2025-04-30T03:02:54.969Z] 企业微信通知发送成功: {"errcode":0,"errmsg":"ok"}
+[2025-04-30T03:02:59.413Z] Sentry Webhook服务已启动，监听端口: 3000
+[2025-04-30T03:02:59.414Z] 健康检查: http://localhost:3000/health
+[2025-04-30T03:02:59.415Z] Webhook接收地址: http://localhost:3000/webhook
+[2025-04-30T03:02:59.415Z] 日志文件路径: D:\czd\AI-server\sentry-webhook-server\logs\sentry-webhook-2025-04-30.log
+[2025-04-30T03:03:00.326Z] Sentry Webhook服务已启动，监听端口: 3000
+[2025-04-30T03:03:00.327Z] 健康检查: http://localhost:3000/health
+[2025-04-30T03:03:00.328Z] Webhook接收地址: http://localhost:3000/webhook
+[2025-04-30T03:03:00.328Z] 日志文件路径: D:\czd\AI-server\sentry-webhook-server\logs\sentry-webhook-2025-04-30.log
+[2025-04-30T03:03:13.319Z] 收到Sentry Webhook消息:
+[2025-04-30T03:03:13.319Z] --------- 消息头信息 ---------
+[2025-04-30T03:03:13.320Z] Headers: {
+  "accept": "application/json, text/plain, */*",
+  "content-type": "application/json",
+  "user-agent": "axios/1.9.0",
+  "content-length": "305",
+  "accept-encoding": "gzip, compress, deflate, br",
+  "host": "localhost:3000",
+  "connection": "keep-alive"
+}
+[2025-04-30T03:03:13.320Z] --------- 消息体信息 ---------
+[2025-04-30T03:03:13.321Z] Body: {
+  "event": {
+    "event_id": "test-event-id-123",
+    "message": "测试错误消息",
+    "level": "error",
+    "timestamp": "2025-04-30T03:03:13.282Z",
+    "exception": {
+      "values": [
+        {
+          "type": "Error",
+          "value": "测试异常",
+          "stacktrace": {
+            "frames": [
+              {
+                "filename": "test.js",
+                "lineno": 42,
+                "function": "testFunction"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "project": "测试项目"
+}
+[2025-04-30T03:03:13.322Z] 从消息体识别出错误事件
+[2025-04-30T03:03:13.322Z] 事件类型: event
+[2025-04-30T03:03:13.323Z] --------- 错误事件处理 ---------
+[2025-04-30T03:03:13.323Z] 项目: 测试项目
+[2025-04-30T03:03:13.323Z] 事件ID: test-event-id-123
+[2025-04-30T03:03:13.324Z] 错误消息: 测试错误消息
+[2025-04-30T03:03:13.324Z] 错误级别: error
+[2025-04-30T03:03:13.325Z] 发生时间: 2025-04-30T03:03:13.282Z
+[2025-04-30T03:03:13.325Z] 异常类型: Error
+[2025-04-30T03:03:13.325Z] 异常值: 测试异常
+[2025-04-30T03:03:13.326Z] 堆栈信息:
+[2025-04-30T03:03:13.326Z]   [0] test.js:42 - testFunction
+[2025-04-30T03:03:13.574Z] 企业微信通知发送成功: {"errcode":0,"errmsg":"ok"}
+[2025-04-30T03:03:16.381Z] 收到Sentry Webhook消息:
+[2025-04-30T03:03:16.382Z] --------- 消息头信息 ---------
+[2025-04-30T03:03:16.382Z] Headers: {
+  "accept": "application/json, text/plain, */*",
+  "content-type": "application/json",
+  "user-agent": "axios/1.9.0",
+  "content-length": "127",
+  "accept-encoding": "gzip, compress, deflate, br",
+  "host": "localhost:3000",
+  "connection": "keep-alive"
+}
+[2025-04-30T03:03:16.385Z] --------- 消息体信息 ---------
+[2025-04-30T03:03:16.386Z] Body: {
+  "action": "created",
+  "issue": {
+    "id": "test-issue-id-456",
+    "title": "测试问题标题",
+    "culprit": "测试来源",
+    "level": "warning"
+  }
+}
+[2025-04-30T03:03:16.390Z] 从消息体识别出问题事件
+[2025-04-30T03:03:16.392Z] 事件类型: issue
+[2025-04-30T03:03:16.392Z] --------- 问题事件处理 ---------
+[2025-04-30T03:03:16.392Z] 问题ID: test-issue-id-456
+[2025-04-30T03:03:16.393Z] 动作: created
+[2025-04-30T03:03:16.393Z] 标题: 测试问题标题
+[2025-04-30T03:03:16.393Z] 来源: 测试来源
+[2025-04-30T03:03:16.393Z] 级别: warning
+[2025-04-30T03:03:16.556Z] 企业微信通知发送成功: {"errcode":0,"errmsg":"ok"}

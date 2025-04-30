@@ -1,0 +1,24 @@
+.DS_Store
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+/dist/
+package-lock.json
+yarn.lock
+
+# Editor directories and files
+.idea
+.vscode
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+.history
+/.project
+/release
+release.zip
+release.tar
+jsconfig.json
+package-lock.json
+.gitlab-ci.yml
