@@ -1,0 +1,465 @@
+/* 基础样式 */
+:root {
+    --primary-color: #409EFF;
+    --success-color: #67C23A;
+    --warning-color: #E6A23C;
+    --danger-color: #F56C6C;
+    --info-color: #909399;
+    --text-color: #303133;
+    --text-color-secondary: #606266;
+    --border-color: #DCDFE6;
+    --border-color-light: #E4E7ED;
+    --bg-color: #f5f7fa;
+    --shadow-color: rgba(0, 0, 0, 0.1);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f7fa;
+    color: #333;
+}
+
+/* 主要容器 */
+.app-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.app-header {
+    background-color: #409EFF;
+    color: white;
+    padding: 1rem;
+    box-shadow: 0 2px 12px 0 rgba(0, 0, 0, 0.1);
+}
+
+.main-title {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+}
+
+.main-content {
+    flex: 1;
+    padding: 1.5rem;
+}
+
+.dashboard-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 状态指示器样式 */
+.status-card {
+    margin-bottom: 1rem;
+}
+
+.status-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    margin-right: 8px;
+}
+
+.status-connected {
+    background-color: #67C23A;
+    box-shadow: 0 0 0 3px rgba(103, 194, 58, 0.2);
+}
+
+.status-disconnected {
+    background-color: #F56C6C;
+    box-shadow: 0 0 0 3px rgba(245, 108, 108, 0.2);
+}
+
+.info-box {
+    background-color: #F2F6FC;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: #909399;
+}
+
+/* 操作按钮组 */
+.action-buttons {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+.action-buttons .el-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.action-buttons .el-button i {
+    margin-right: 5px;
+}
+
+/* 筛选区域样式 */
+.filter-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.filter-info {
+    background-color: #f0f9eb;
+    padding: 8px 12px;
+    border-radius: 4px;
+    margin-top: 10px;
+    color: #67c23a;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+/* 消息列表样式 */
+.message-list-header {
+    margin-top: 20px;
+}
+
+.message-list {
+    margin-top: 1rem;
+    border-radius: 4px;
+    min-height: 200px;
+}
+
+.message-card {
+    margin-bottom: 15px;
+    border-left: 4px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.message-card-new {
+    animation: highlight 3s ease;
+}
+
+@keyframes highlight {
+    0% {
+        background-color: rgba(64, 158, 255, 0.1);
+        border-left-color: #409EFF;
+        transform: translateX(-5px);
+    }
+    100% {
+        background-color: white;
+        border-left-color: transparent;
+        transform: translateX(0);
+    }
+}
+
+/* 消息类型的卡片样式 */
+.message-card-error {
+    border-left-color: #F56C6C;
+    background-color: rgba(245, 108, 108, 0.05);
+}
+
+.message-card-warning {
+    border-left-color: #E6A23C;
+    background-color: rgba(230, 162, 60, 0.05);
+}
+
+.message-card-info {
+    border-left-color: #67C23A;
+    background-color: rgba(103, 194, 58, 0.05);
+}
+
+.message-card-debug {
+    border-left-color: #909399;
+    background-color: rgba(144, 147, 153, 0.05);
+}
+
+.message-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.message-time {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.timestamp {
+    font-weight: 500;
+    color: #606266;
+}
+
+.message-id {
+    font-size: 12px;
+    color: #909399;
+}
+
+.message-content {
+    position: relative;
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 4px;
+}
+
+.property-list {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-bottom: 15px;
+}
+
+.property-item {
+    display: flex;
+    align-items: flex-start;
+}
+
+.property-label {
+    font-weight: bold;
+    width: 80px;
+    flex-shrink: 0;
+    color: #606266;
+}
+
+.property-value {
+    flex: 1;
+    word-break: break-word;
+}
+
+/* 高亮搜索结果 */
+.highlight {
+    background-color: #ffeaa7;
+    border-radius: 2px;
+    padding: 0 2px;
+    font-weight: bold;
+}
+
+/* 分页样式 */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+/* 空状态样式 */
+.empty-container {
+    text-align: center;
+    padding: 40px 0;
+    color: #909399;
+}
+
+.empty-icon {
+    font-size: 60px;
+    margin-bottom: 20px;
+    color: #DCDFE6;
+}
+
+/* AI分析样式 */
+.analyze-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    z-index: 2;
+}
+
+.analysis-container {
+    margin-top: 15px;
+    border: 1px solid #EBEEF5;
+    border-radius: 4px;
+    background-color: #fafafa;
+    position: relative;
+}
+
+.analysis-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #EBEEF5;
+    background-color: #f5f7fa;
+}
+
+.analysis-title {
+    font-weight: bold;
+    color: #409EFF;
+    display: flex;
+    align-items: center;
+}
+
+.analysis-title i {
+    margin-right: 5px;
+}
+
+.analysis-content {
+    padding: 15px;
+}
+
+.analysis-section {
+    margin-bottom: 15px;
+}
+
+.section-title {
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #606266;
+}
+
+.loading-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 动画过渡 */
+.fade-enter-active,
+.fade-leave-active {
+    transition: opacity 0.3s, transform 0.3s;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+    opacity: 0;
+    transform: translateY(10px);
+}
+
+/* 折叠区域样式 */
+.el-collapse {
+    border: none;
+    margin-bottom: 20px;
+}
+
+.el-collapse-item__header {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.el-collapse-item__content {
+    padding-top: 0;
+}
+
+/* 媒体查询 - 响应式布局 */
+@media (max-width: 768px) {
+    .action-buttons {
+        flex-direction: column;
+        width: 100%;
+        margin-top: 10px;
+    }
+    
+    .action-buttons .el-button {
+        width: 100%;
+    }
+    
+    .search-box {
+        flex-direction: column;
+    }
+    
+    .search-box .el-input,
+    .search-box .el-select,
+    .search-box .el-button {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+}
+
+/* 代码和预格式化文本 */
+pre {
+    background-color: #f8f8f8;
+    padding: 10px;
+    border-radius: 4px;
+    overflow-x: auto;
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+    line-height: 1.4;
+}
+
+code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* 文本格式化 */
+.formatted-text {
+    white-space: pre-wrap;
+    word-break: break-word;
+}
+
+.formatted-text p {
+    margin: 0 0 10px 0;
+}
+
+.formatted-text p:last-child {
+    margin-bottom: 0;
+}
+
+.formatted-text ul, .formatted-text ol {
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding-left: 20px;
+}
+
+.formatted-text li {
+    margin-bottom: 5px;
+}
+
+.formatted-text code {
+    font-family: 'SFMono-Regular', Consolas, 'Liberation Mono', Menlo, monospace;
+    background-color: #f0f0f0;
+    padding: 2px 4px;
+    border-radius: 3px;
+    font-size: 0.9em;
+}
+
+/* 类型标签颜色 */
+.tag-error {
+    background-color: var(--danger-color);
+    color: white;
+}
+
+.tag-warning {
+    background-color: var(--warning-color);
+    color: white;
+}
+
+.tag-info {
+    background-color: var(--success-color);
+    color: white;
+}
+
+.tag-debug {
+    background-color: var(--info-color);
+    color: white;
+}
+
+/* 为Element-plus标签添加样式覆盖 */
+.el-tag--info {
+    --el-tag-bg-color: var(--info-color) !important;
+    --el-tag-text-color: #fff !important;
+}
+
+.el-tag--success {
+    --el-tag-bg-color: var(--success-color) !important;
+    --el-tag-text-color: #fff !important;
+} 
